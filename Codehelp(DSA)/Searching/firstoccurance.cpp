@@ -40,12 +40,16 @@ void lastOccrance(int arr[],int n, int target ,int &ans){
 }
 
 int main(){
-    int arr[]={20,20,20,20,20,30,40,50};
+    int arr[]={20,20,20,20,20,20,20,30,40,50};
     int target=20;
-    int n=8;
-    int ans=-1;
-    // findFirstOccurance(arr,n,target,ans);
-    lastOccrance(arr,n,target,ans);
-    cout<<"last occrane index "<<ans<<endl;
+    int n=10;
+    int first=-1;
+    int total=0;
+    int last=-1;
+    findFirstOccurance(arr,n,target,first);
+
+    lastOccrance(arr,n,target,last);
+    total=last-first+1;
+    cout<<"total  occrane index "<< total<<endl;
 
 }
